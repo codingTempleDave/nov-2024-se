@@ -38,6 +38,7 @@ def duel_sith(sith):
 
 # Main menu loop
 user_choice = 0
+
 while user_choice != 2:  # Loop until the user chooses to exit
     print("\nMain Menu")
     print("1. Duel a Sith")
