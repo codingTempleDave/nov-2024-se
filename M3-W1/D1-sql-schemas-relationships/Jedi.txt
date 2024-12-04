@@ -1,0 +1,65 @@
+jedi
+jedi_id (INT, PK)
+name (VARCHAR(100))
+lightsaber_color (CHAR(10))
+force_power_level (FLOAT) 
+
+padawans
+padawan_id (INT, PK)
+name (VARCHAR(100))
+training_start_date (DATE)
+jedi_id (FK) - workbench will do this
+
+missions
+mission_id (INT, PK)
+location (VARCHAR(50))
+
+jedi_missions - workbench will do this
+jedi_int (INT)
+mission_id (INT)
+
+
+
+One 2 Many - click on the many side first to add
+
+Solid Line:
+Represents a mandatory relationship.
+
+Dotted Line:
+Represents an optional relationship.
+
+Dummy Data:
+
+INSERT INTO jedi (jedi_id, name, lightsaber_color, force_power_level)
+VALUES 
+(1, 'Luke Skywalker', 'Green', 8.7),
+(2, 'Obi-Wan Kenobi', 'Blue', 8.2),
+(3, 'Yoda', 'Green', 9.5);
+
+
+INSERT INTO padawans (padawan_id, name, training_start_date, jedi_id)
+VALUES
+(1, 'Anakin Skywalker', '2000-01-01', 2),  -- Obi-Wan Kenobi's Padawan
+(2, 'Rey', '2010-05-20', 1);              -- Luke Skywalker's Padawan
+
+
+INSERT INTO missions (mission_id, location)
+VALUES 
+(1, 'Tatooine'),
+(2, 'Coruscant'),
+(3, 'Endor');
+
+
+INSERT INTO jedi_missions (jedi_id, mission_id)
+VALUES
+(1, 1),  -- Luke Skywalker on Mission 1 (Tatooine)
+(2, 1),  -- Obi-Wan Kenobi on Mission 1 (Tatooine)
+(2, 2),  -- Obi-Wan Kenobi on Mission 2 (Coruscant)
+(3, 3);  -- Yoda on Mission 3 (Endor)
+
+
+
+
+
+
+
