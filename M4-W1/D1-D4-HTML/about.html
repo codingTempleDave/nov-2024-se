@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>About Super Mario</title>
+</head>
+
+<body>
+    <!-- semantic tags -->
+    <header>
+        <h1>More awesome HTML Mario Stuff</h1>        
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a> | 
+        <a href="about.html">About</a> | 
+        <a href="form.html">Form</a>
+        <br><br>
+        <b>Jump to section:</b> <br> 
+        <a href="#media">Media</a> | 
+        <a href="#table">Game Table</a> | 
+        <a href="#quotes">Mario Quotes</a> | 
+        <a href="#iframe">Game Play</a> | 
+        <a href="index.html#friends">Mario's Friends</a>
+    </nav>
+
+    <main>
+        <section id="media"> <!-- audio -->
+            <h2>Super Mario Media</h2>
+
+            <div>
+                <h3>Mario Theme Song</h3>
+                <audio controls autoplay muted>
+                    <source src="https://kappa.vgmsite.com/soundtracks/super-mario-bros/jiqfbhrhqx/01.%20Ground%20Theme.mp3"
+                        type="audio/mpeg" />
+                    Your browser doesn't support the audio tag
+                </audio>
+            </div>
+        </section>
+
+        <section> <!-- video -->
+            <div>
+                <h3>Gameplay Video</h3>
+                <video controls poster="media/mario_poster.png" width="400">
+                    <source src="media/mario_speed_run.mp4" />
+                    Your browser does not support the video tag
+                </video>
+            </div>
+        </section>
+
+        <section id="table">
+            <h2>Super Mario Power-Ups</h2>
+            <table border="1">
+                <tr> <!-- table row -->
+                    <th>Power-Up</th> <!-- table headers -->
+                    <th>Effect</th>
+                </tr>
+                <tr>
+                    <td>Super Mushroom</td> <!-- table data -->
+                    <td>Makes Super Mario Bros Grow</td>
+                </tr>
+                <tr>
+                    <td>Fire Flower</td>
+                    <td>Lets Super Mario Bros shoot fire boogers</td>
+                </tr>
+                <tr>
+                    <td>Star</td>
+                    <td>Makes Super Mario Bros Invincible</td>
+                </tr>
+            </table>
+        </section>
+        <section id="quotes">
+            <h2>Famous Mario Quotes</h2>
+            <blockquote>
+                <q>It's-a me, Mario!</q>
+                <cite>- Mario</cite>
+            </blockquote>
+            <blockquote>
+                <q>Thank you Mario! But our princess is in another castle!</q>
+                <cite>- Toad</cite>
+            </blockquote>
+        </section>
+
+        <section>
+            <h2>ASCII Art</h2>
+            <p>Here's some ascii art made possible by <code>pre</code></p>
+            
+            <pre>
+        ⬜⬜⬜⬜⬛⬛⬛⬛⬛⬛⬛⬛⬜⬜⬜⬜
+        ⬜⬜⬜⬛⬛⬜⬜🟥🟥⬜⬜⬛⬛⬜⬜⬜
+        ⬜⬜⬛⬛⬜⬜⬜🟥🟥⬜⬜⬜⬛⬛⬜⬜
+        ⬜⬛⬛🟥⬜⬜🟥🟥🟥🟥⬜⬜🟥⬛⬛⬜
+        ⬜⬛⬜🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥⬜⬛⬜
+        ⬛⬛⬜⬜🟥🟥⬜⬜⬜⬜🟥🟥⬜⬜⬛⬛
+        ⬛⬜⬜⬜🟥⬜⬜⬜⬜⬜⬜🟥⬜⬜⬜⬛
+        ⬛⬜⬜⬜🟥⬜⬜⬜⬜⬜⬜🟥⬜⬜⬜⬛
+        ⬛⬜⬜🟥🟥⬜⬜⬜⬜⬜⬜🟥🟥⬜⬜⬛
+        ⬛🟥🟥🟥🟥🟥⬜⬜⬜⬜🟥🟥🟥🟥🟥⬛
+        ⬛🟥🟥⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛🟥🟥⬛
+        ⬛⬛⬛⬛⬜⬜⬛⬜⬜⬛⬜⬜⬛⬛⬛⬛
+        ⬜⬛⬛⬜⬜⬜⬛⬜⬜⬛⬜⬜⬜⬛⬛⬜
+        ⬜⬜⬛⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬛⬜⬜
+        ⬜⬜⬛⬛⬜⬜⬜⬜⬜⬜⬜⬜⬛⬛⬜⬜
+        ⬜⬜⬜⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬜⬜⬜
+
+            </pre>     
+        </section>
+
+        <section>
+            <h2>Inline vs. Block Elements</h2>
+            Div is a <div style="height:300px;">block</div> element
+            
+            span is an <span style="height:300px;color:blue">inline</span> element            
+        </section>
+
+        <section id="iframe">
+            <h2>Play Super Mario Online</h2>
+            <p>Let's play!</p>
+            <iframe src="https://www.retrogames.cc/embed/43806-super-mario-bros-simplified.html" 
+                width="600" height="450" frameborder="no" allowfullscreen="true" 
+                webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no">
+            </iframe>
+
+            <p>Great scenes from the movie</p>
+            <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/ju0DMF4Vhfc?si=TeHzGXy31v2K3ZHp" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>            
+        </section>
+    </main>
+
+    <!-- Aside Section -->
+    <aside>
+        <h3>Did You Know?</h3>
+        <p>Mario was originally known as <strong>Jumpman</strong> in Donkey Kong!</p>
+    </aside>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Super Mario Fans. All rights reserved.</p>
+        <p>
+            &nbsp;For more information, visit 
+            <a href="https://en.wikipedia.org/wiki/Super_Mario" target="_blank">Super Mario Wikipedia</a>
+        </p>
+    </footer>
+</body>
+</html>

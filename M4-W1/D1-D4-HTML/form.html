@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>Super Mario Form</title>
+</head>
+<body>
+    <h1>Mario wants to know more about you!</h1>
+    <nav>
+        <a href="index.html">Home</a> | 
+        <a href="about.html">About</a> | 
+        <a href="form.html">Form</a>
+    </nav>
+    <br/><br/>
+
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>Player Info</legend>
+
+            <label for="name">Player 1's name</label><br>
+            <input type="text" id="name" name="name" 
+                placeholder="Enter your name" required>
+            <br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            
+            <label for="ssn">Social Security Number</label><br>
+            <input type="number" id="ssn" name="ssn" required>
+            <br><br>
+
+            <label for="password">Most Commonly Used Password:</label><br>
+            <input type="password" id="password" name="password" 
+                placeholder="Enter the pw here" required>
+            <br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Adventure Preferences</legend>
+
+            <label for="character">Favorite Character</label><br>
+            <select id="character" required>
+                <option selected hidden disabled>Select Favorite Character</option>
+                <option value="mario">Mario</option>
+                <option value="luigi">Luigi</option>
+                <option value="peach">Peach</option>        
+                <option value="yoshi">Yoshi</option>
+                <option value="other">Other</option>
+            </select>
+            <br><br>
+
+            <p>Single or Multiplayer?</p>
+            <input type="radio" id="single-player" name="play-style" value="single" required>
+            <label for="single-player">Single Player</label><br>
+            <input type="radio" id="multi-player" name="play-style" value="multi" required>
+            <label for="multi-player">Multi Player</label>
+            <br><br>
+
+            <p>Select Favorite Power-Ups:</p>
+            <input type="checkbox" id="mushroom" name="power_ups" value="mushroom">
+            <label for="mushroom">Super Mushroom</label><br>
+            <input type="checkbox" id="fire-flower" name="power_ups" value="fire_flower">
+            <label for="fire-flower">Fire Flower</label><br>
+            <input type="checkbox" id="star" name="power_ups" value="star">
+            <label for="star">Invincibility Star</label><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Player Stats</legend>
+
+            <label for="credit-card">Credit Card Number:</label><br>
+            <input type="number" id="credit-card" name="credit-card" required>
+            <br><br>
+
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" required>
+            <br><br>
+
+            Sketchiness of Mario right now:<br>
+            <input type="range">
+            <br><br>
+
+            <label for="story">Tell us about your Mother's Maiden Name</label><br>
+            <textarea id="story" name="story" rows="12" cols="60" 
+                placeholder="What is it and where did it come from?"></textarea>
+            <br><br>
+            Color<br>
+            <input type="color">
+            <br><br>
+            File<br>
+            <input type="file">
+        </fieldset>
+        <br>
+        <button type="submit">Submit Info</button>
+    </form>
+</body>
+</html>
