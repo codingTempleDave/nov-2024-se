@@ -1,0 +1,100 @@
+/* 
+order of styles being applied
+
+external - internal - inline
+*/
+
+/* universal selector */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.funny-quote {
+    font-size: 18px;
+    /* hexadecimal value RGB */
+    color: #457b9d;
+    padding: 15px;
+    border: 2px solid #457b9d;
+    margin: 35px;
+    width: auto;
+    height: auto;
+}
+
+/* :hover Pseudo-Class */
+.funny-quote:hover {
+    background-color: #f4a261;
+    color: white;
+    cursor: pointer;
+}
+
+/* Width, Height, Border, Padding, and Margin */
+.python-characters {
+    width: 80%;
+    height: auto;
+    /* margin: 0 auto centers */
+    margin: 0 auto 20px;
+    padding: 15px;
+    /* rgba - controls color and opacity */
+    box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+    border: 2px dashed #e63946;
+}
+
+.python-characters, .python-knights {
+    background-color: #ffe6e6;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* descendant selector */
+.python-knights p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* child selector */
+div > p:first-child {
+    font-weight: bold;
+    color: purple;
+}
+
+ul {
+    margin-bottom: 20px;
+}
+
+ul li:nth-child(even) {
+    color: cadetblue;
+}
+
+/* Input Styling */
+input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border: 2px solid #264653;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* :focus Pseudo-Class */
+.name-input:focus {
+    border: 4px solid #e63946;
+    background-color: #f1faee;
+}
+
+
+input[type="submit"] {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 75%;
+}
+
+/* :active Pseudo-Class */
+input[type="submit"]:active {
+    background-color: #457b9d;
+    color: yellow;
+}

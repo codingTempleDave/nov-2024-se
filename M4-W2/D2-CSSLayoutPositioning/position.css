@@ -1,0 +1,91 @@
+.static-position {
+    /* default position */
+    position: static;
+    /* doesn't affect static */
+    top: 40px;
+    left: 40px;
+    width:100px;
+    height:100px;
+    border: 2px solid black;
+    background-color: coral;
+}
+
+.sticky-position {
+    position: sticky;
+    top: 10px;
+    left: 40px;
+    width:100px;
+    height:100px;
+    border: 2px solid black;
+    background-color:dimgrey;
+}
+
+.relative-position {
+    /* from wherever it was to begin with move it*/
+    /* small movements */
+    position: relative;
+    top: 40px;
+    left: 70px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    background-color:goldenrod;
+  
+    /* higher the z-index the more in front it is
+       lower the z-index the more in the back it is
+    */
+    z-index: 1000;
+}
+
+.absolute-position {
+    /* positioned from the browser window or it's positioned parent */
+    /* good for moving things inside of other things */
+    position: absolute;
+    top: 140px;
+    right:240px;
+    width:100px;
+    height:100px;
+    border: 2px solid black;
+    background-color:indianred;
+}
+  
+.absolute-container {
+    /* positioned parent so abosolute in the child will get position from parent */
+    position: relative;
+    border: 2px solid black;
+    width:400px;
+    height:800px;
+}
+
+.fixed-position {
+    /* stays whevever you put it*/
+    /* good for chat support/contact buttons */
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    background-color:lemonchiffon;
+  }
+
+  .block-inline {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    background-color:moccasin;
+    /*padding:10px; can apply padding to inline*/
+    display: inline-block;
+    /*
+    block - takes up own line height/width apply
+    inline - all on one line height/width do not apply
+    inline-block - hybrid all on one line and heigh/width apply
+    */
+    /*brings the content to the right of the page and
+    converts to block level element.  Also allows for things to be next to it*/
+    /* float: right;  */
+  
+    /* hides anything that goes outside the container and allows you to scroll
+    that content */
+    overflow: hidden scroll;  
+  }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monty Python CSS!</title>
+    <link rel="stylesheet" href="montypython.css">
+    <!-- internal styling -->
+    <style>
+        /* css comments */
+        /* select all h1 tags */
+        h1 {
+            color: tomato;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+        /* # is id */
+        #main-title {
+            font-size: 40px;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px black;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-title">Monty Python's CSS Adventure</h1>
+
+    <!-- inline styling | isn't used very often | overrides the other methods -->
+    <p style="color:red; font-size:20px;">"Run Away!"</p>
+
+    <div class="funny-quote">
+        "What... is the airspeed velocity of an unladen swallow?"
+    </div>
+
+    <div class="python-characters">
+        <h2>Characters</h2>
+        <p>King Arthur | Black Knight | Killer Rabbit | Sir Lancelot</p>
+    </div>
+
+    <div class="python-knights">
+        <h2>Descendant and :first-child</h2>
+        <p>"We are the Knights who say 'Ni!'"</p>
+        <p>"Bring us... a shrubbery!"</p>
+        <div>
+            <p>"One that looks nice.  And not too expensive"</p>
+            <p>2nd child</p>
+        </div>
+    </div>
+
+    <h2>Knights' Shopping List</h2>
+    <ul>
+        <li>A shrubbery</li>
+        <li>A herring</li>
+        <li>A coconut</li>
+        <li>A duck</li>
+    </ul>
+
+    <h2>What.... is your name? (:</h2>
+    <form>
+        <input type="text" placeholder="Your Name" class="name-input">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
