@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*font-family: 'Roboto', sans-serif;*/
+
+@font-face{
+    font-family:jungle;
+    src:url(jungle.ttf);
+}
+
+header{ 
+    background:rgba(115,167,136,.8);
+    margin-bottom:20px;
+    padding-top:10px;
+}
+header a{
+    text-decoration:none;
+}
+
+.logo{
+    background:url(images/logo.png) no-repeat;
+    background-size:70px;
+    font-family:jungle;
+    font-size:3rem;
+    color:#135e46;
+    padding-left:80px;
+    text-shadow:3px 3px black;
+    transition:.3s;
+}
+.logo:hover{
+    transform:translate(10px);
+    color:white;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav a{
+    font-family:jungle;
+    color:#b67b65;
+    font-size:1.8rem;
+    text-shadow:2px 2px black;
+    transition:.3s;
+}
+nav a:hover{
+    color:white;
+    transform: scale(1.3);
+}
+
+.banner{
+    height:60vh;
+    background:url(images/slothStare.jpg) no-repeat;
+    background-position:center;
+    background-size:cover;
+    margin-bottom:20px;
+}
+
+.meetSloths{
+    height:auto;
+    background:rgba(115,167,136,.8)
+}
+.sloths{
+    display:flex;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+    margin-bottom:20px;      
+}
+
+.meetSloths h1{
+    font-family: 'Roboto', sans-serif;
+    font-size:1.7rem;
+    color:white;
+    text-shadow:2px 2px black;
+    margin:0 0 40px 30px;
+    padding-top:40px;
+}
+
+.sloths div{    
+    height:30vh;
+    border:5px white solid;
+    border-radius:20px;
+    background-position:center;
+    background-size:cover;
+    margin-bottom:20px;
+}
+
+.sloth1{
+    background:url(images/slothHanging.jpg) no-repeat;
+}
+.sloth2{
+    background:url(images/slothClimbing.jpg) no-repeat;
+}
+.sloth3{
+    background:url(images/slothChilling.jpg) no-repeat;
+}
+
+footer{
+    font-family: 'Roboto', sans-serif;
+    margin-bottom:20px;
+}
+footer .row img{
+    width:50px;
+}
