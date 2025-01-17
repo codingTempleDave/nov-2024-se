@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Forms</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <form class="needs-validation" novalidate>
+      <div class="container my-4 bg-light p-3 rounded">
+        
+				<div class="row">
+          
+					<div class="col-lg-5">
+            <h2 class="mb-4">Monty Python Form</h2>
+						<div class="mb-3">
+							<label for="fullName" class="form-label">Full Name</label>
+							<input type="text" class="form-control" id="fullName" required>
+							<div class="invalid-feedback">
+								Full Name is required!
+							</div>
+							<div class="valid-feedback">
+								Thank you for obeying!
+							</div>
+						</div>
+						
+						<div class="mb-4">
+							<label for="questSelect" class="form-label">Quest:</label>
+							<select class="form-select" aria-label="Quest Select" id="questSelect" required>
+								<option selected disabled value="" hidden>What is your quest?</option>
+								<option>To seek the holy grail</option>
+								<option>Nothing else matters</option>
+								<option>Don't pick me</option>
+							</select>
+							<div class="invalid-feedback">
+								Please select a quest, it's critical
+							</div>
+						</div>
+
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="montyPython"
+								id="montyAmazing" value="amazing" checked required>
+							<label class="form-check-label" for="montyAmazing">
+								Monty Python is Amazing
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="montyPython"
+								id="montyGreat" value="Monty is Great">
+							<label class="form-check-label" for="montyGreat">
+								Monty Python is Great
+							</label>
+						</div>
+          </div>
+
+					<div class="col-lg-7">
+						<div class="input-group">
+							<input type="email" class="form-control" id="userEmail"
+								placeholder="Enter email" aria-describedby="email input" required>
+							<span class="input-group-text">username@host.com</span>
+							<div class="invalid-feedback">
+								We need your email to track err help you out!
+							</div>
+						</div>
+						<div id="emailHelp" class="form-text text-muted m-2">
+							We'll never share your email to anyone unless we get a lot of money
+						</div>
+
+						<div class="form-floating mb-3">
+							<input type="password" class="form-control" id="userPassword"
+								placeholder="" required>
+							<label for="userPassword">Password!!</label>
+							<div class="invalid-feedback">
+								Password is required!
+							</div>
+						</div>
+
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value=""
+								id="signLife" required>
+							<label class="form-check-label" for="signLife">
+								Sign your life away?
+							</label>
+							<div class="invalid-feedback">
+								We need your life, sign away
+							</div>
+						</div>
+
+						<button class="btn btn-primary mt-3" type="submit">Submit Form</button>
+
+					</div>
+					
+        
+				</div>
+      </div>
+    </form>
+
+
+		<script>
+			// Example starter JavaScript for disabling form submissions if there are invalid fields
+			(function () {
+				'use strict';
+	
+				// Fetch all the forms we want to apply custom Bootstrap validation styles to
+				var forms = document.querySelectorAll('.needs-validation');
+	
+				// Loop over them and prevent submission
+				Array.prototype.slice.call(forms)
+					.forEach(function (form) {
+						form.addEventListener('submit', function (event) {
+							if (!form.checkValidity()) {
+								event.preventDefault();
+								event.stopPropagation();
+							}
+	
+							form.classList.add('was-validated');
+						}, false);
+					});
+			})()
+		</script>
+  </body>
+</html>
