@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The DOM!</title>
+  <!-- async allows the html and js to be ran at the same
+        makes it so wherever you place the <script> tag doesn't matter
+  -->
+  <script src="dom.js" async></script>
+
+  <style>
+    .highlighted {
+      color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <button onclick="handleButtonClick()">Click Me</button>
+  <br/><br/>
+
+  <div onmouseover="handleMouseOver()" onmouseout="handleMouseOut()" style="border:solid;width:200px;">
+    Hover over me
+  </div>
+  <br/>
+
+  <input type="text" onkeydown="handleKeyDown(event)" placeholder="KeyDown">
+  <br/><br/>
+
+  <form onsubmit="handleSubmit(event)">
+    <input type="text" name="username" placeholder="Enter username">
+    <button type="submit">Submit</button>
+  </form>
+  <br>
+
+  <input type="text" onchange="handleChange(event)" placeholder="Change Event">
+  <br><br>
+
+  <input type="text" onfocus="handleFocus()" onblur="handleBlur()" placeholder="Click to focus">
+
+  <div id="container">
+    <h4>Welcome to DOM Manipulation</h4>
+    <p id="message" style="font-family:arial;">This is a paragraph.</p>
+  </div>
+  
+  <button onclick="updateParagraph()">Update Paragraph</button>
+  <br><br>
+
+  <img id="image" src="images/before.jpg" alt="Before"
+    onmouseover="changeImage()" onmouseout="revertImage()"
+    style="width: 300px; height: auto;">
+  <br><br>
+
+  <form id="myForm" onsubmit="handleSubmit2(event)">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <label for="username">Email:</label>
+    <input type="email" id="email" name="email">
+    <button type="submit">Submit</button>
+  </form>
+  <br>
+
+  <section id="box" onclick="highlight()">
+    Click me to highlight!
+  </section>
+  <br/>
+
+  <button id="myButton">Click Me</button>
+  <br/><br/>
+
+  <a href="#" onclick="changeATag()">Change Where I Go!</a>
+  <br/><br/>
+
+  <div id="removeMe" ondblclick="removeDiv()">
+    Double Click to Remove
+  </div>
+
+</body>
+</html>
