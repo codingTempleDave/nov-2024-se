@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timeout Example</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        padding: 20px;
+        text-align: center;
+    }
+    .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+    }
+    .message {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Timeout Example</h1>
+    <p>Check the page and console for output.</p>
+    <div class="message" id="waitMessage">Wait for it...</div>
+</div>
+
+<script>
+    console.log("Start");
+
+    // setTimeout makes code wait however many miliseconds before it runs
+    setTimeout(function (){
+        document.getElementById("waitMessage").textContent = "Wait for it... done!";
+        console.log("it's been 3 seconds");
+    }, 3000); // 3000 miliseconds i.e. 3 seconds
+</script>
+</body>
+</html>

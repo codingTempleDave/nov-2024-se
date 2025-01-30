@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting and Farewell</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Greeting and Farewell</h1>
+        <button id="greetBtn" class="btn">Greet Alice</button>
+        <br>
+        <div id="greetingMessage"></div>
+        <div id="farewellMessage"></div>
+    </div>
+
+    <script>
+
+        // A callback function in JavaScript is a function that is passed as an argument 
+        // to another function and is executed later, often after an event occurs or an operation completes.
+        
+        function greet(name, callback){
+            const greetingMessage = document.getElementById("greetingMessage");
+            greetingMessage.textContent = `Hello ${name}!`;
+            callback();
+        }
+
+        function farewell() {
+            const farewellMessage = document.getElementById("farewellMessage");
+            farewellMessage.textContent = "Buh bye!";
+        }
+
+        function alertMe() {
+            alert("Hey!!!!");
+        }
+
+        document.getElementById("greetBtn").addEventListener("click", function (){
+            greet("Alice", alertMe);
+        });
+
+    </script>
+</body>
+</html>

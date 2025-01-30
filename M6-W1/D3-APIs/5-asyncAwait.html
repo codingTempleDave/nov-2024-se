@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch User Data</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      #userData {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="userData">
+      <h2>User Data</h2>
+      <p id="userInfo">Loading...</p>
+    </div>
+
+    <script>
+      async function getUserData() {
+        // The fetch returns JSON which is unusable to JS
+        const userJSON = await fetch(
+          "https://jsonplaceholder.typicode.com/users/1"
+        );
+        
+        // Need to convert the returned JSON to a JS object so we can use the data
+        const userObject = await userJSON.json();
+        
+        return userObject;
+      }
+
+      async function displayUserData() {
+        const userInfoElement = document.getElementById("userInfo");
+
+        try {
+          // the await keyword makes the code wait until getUserData() returns the object
+          const userData = await getUserData();
+
+          userInfoElement.innerHTML = `Name: ${userData.name}<br/>
+                                     Email: ${userData.email}<br/>
+                                     City: ${userData.address.city}<br/>
+                                     <a href="http://www.${userData.website}" target="_blank">Website</a>`;
+                                     
+        } catch (error) {
+          console.log("Error fetching data:", error);
+          userInfoElement.textContent = "Failed to fetch user data";
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", displayUserData);
+    </script>
+  </body>
+</html>

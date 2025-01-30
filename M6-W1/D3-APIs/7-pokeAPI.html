@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pikachu Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    #pokemon-info {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      padding:10px;
+      background-color: #0E60AF;
+      border: 2px solid black;
+      border-radius: 20px;
+      cursor:pointer;
+      color: white;
+    }
+
+    #pokemon {
+      padding:10px;
+      background-color: #FFCD01;
+      border: 2px solid black;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Pokemon Information</h1>
+    <form>
+      <input type="text" id="pokemon" name="pokemon" placeholder="Enter Pokemon">
+      <br/><br/>
+      <button type="submit">Retrieve Pokemon</button>
+    </form>
+    <div id="pokemon-info">Gotta catch 'em all</div>
+  </div>
+  <script src="7-pokeAPI.js"></script>
+</body>
+
+</html>
